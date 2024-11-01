@@ -1,0 +1,30 @@
+.button {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	padding: 1.125rem 0.9375rem;
+
+	border-radius: 3.125rem;
+	background: var(--accent);
+
+	color: var(--white);
+	font-size: 1rem;
+	line-height: 125%;
+	color: var(--white);
+	text-align: center;
+
+	@media (hover: hover) {
+
+		transition: background .3s, filter .3s;
+
+		&:hover {
+			background: var(--accent-hover);
+		}
+	
+		&:active {
+			filter: brightness(0.9);
+		}
+	}
+}

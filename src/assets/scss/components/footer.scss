@@ -1,0 +1,15 @@
+.footer {
+
+	padding-top: 2.5rem; padding-right: 6.375rem;
+
+	// .footer__copyright
+
+	&__copyright {
+		text-align: end;
+		font-weight: 300;
+		font-size: 0.9375rem;
+		line-height: 126.666667%;
+		color: var(--secondary);
+	}
+
+}

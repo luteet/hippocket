@@ -1,0 +1,35 @@
+
+@mixin m_992 {
+	@media (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin m_768 {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin _550 {
+	@media (min-width: 550px) {
+		@content;
+	}
+}
+
+@mixin _426 {
+	@media (min-width: 426px) {
+		@content;
+	}
+}
+
+@mixin font-include($name, $weight, $display, $style, $src) {
+
+	font-weight: $weight;
+	font-family: $name;
+	font-display: $display;
+	font-style: $style;
+
+	src: url('../fonts/#{$src}.woff2') format('woff2');
+
+}

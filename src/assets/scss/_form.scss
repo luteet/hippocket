@@ -1,0 +1,89 @@
+input, textarea {
+	&::placeholder {
+		transition: opacity .2s ease;
+		opacity: 1;
+	}
+	
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
+
+[type="password"] {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	width: 100%;
+}
+
+.form-label {
+	position: relative;
+
+	display: block;
+
+	span {
+		display: block;
+
+		margin-bottom: 0.625rem;
+	}
+
+	input {
+		width: 100%;
+		
+		padding: 1.0625rem 1.1875rem;
+
+		background: var(--white);
+		border: var(--border-thickness) solid var(--tertiary);
+		border-radius: 1.25rem;
+
+		font-weight: 300;
+		line-height: 125%;
+		font-size: 1rem;
+		color: var(--text-color);
+
+		&::placeholder {
+			color: var(--tertiary);
+		}
+	}
+
+	button {
+		position: absolute;
+		right: 1rem; bottom: 0.625rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 2.1875rem; height: 2.1875rem;
+
+		background: transparent;
+
+		@media (hover: hover) {
+
+			transition: color .15s;
+
+			&:hover {
+				color: var(--accent);
+			}
+		
+			&:active {
+				color: var(--accent-active);
+			}
+		}
+
+		svg {
+			width: 0.9375rem; height: auto;
+		}
+
+		@media (hover: hover) {
+
+			transition: color .15s;
+
+			&:hover {
+				color: var(--accent);
+			}
+		
+			&:active {
+				color: var(--accent-active);
+			}
+		}
+	}
+}

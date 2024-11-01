@@ -1,0 +1,178 @@
+@import '../mixin';
+
+.header {
+	position: static;
+
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+
+	width: 100%;
+
+	padding-top: 2.8125rem;
+	padding-right: 5.75rem;
+
+	perspective: 400px;
+
+	z-index: 3;
+
+	// .header__title
+
+	&__title {
+		font-weight: 500;
+		font-size: 1.5rem;
+		line-height: 124%;
+		text-transform: uppercase;
+		color: var(--text-color);
+		
+		@media (min-width: 992px) {
+			font-size: 1.5625rem;
+		}
+	}
+
+	// .header__controls
+
+	&__controls {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.25rem;
+	}
+
+	// .header__chat
+
+	&__chat {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 2.8125rem; height: 2.8125rem;
+
+		border-radius: 50%;
+		background: var(--accent);
+
+		color: var(--white);
+
+		svg {
+			width: 50%; height: 50%;
+		}
+
+		@media (hover: hover) {
+
+			transition: background .3s;
+
+			&:hover {
+				background: var(--accent-hover);
+			}
+		
+			&:active {
+				cursor: pointer;
+				background: var(--accent-active);
+			}
+		}
+	}
+
+	// .header__notifications
+
+	&__notifications {
+		position: relative;
+
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 2.8125rem; height: 2.8125rem;
+
+		border-radius: 50%;
+		background: var(--secondary);
+
+		color: var(--white);
+
+		&[data-number]::after {
+			content: attr(data-number);
+			position: absolute;
+			right: 0; top: 0;
+			transform: translate(15%,-15%);
+
+			width: 1.125rem; height: 1.1875rem;
+
+			border-radius: 50%;
+			background: var(--accent-hover);
+			
+			color: var(--white);
+			font-size: 0.9375rem;
+			line-height: 133%;
+		}
+
+		svg {
+			width: 50%; height: 50%;
+		}
+
+		@media (hover: hover) {
+
+			transition: filter .3s;
+
+			&:hover {
+				filter: brightness(1.1);
+			}
+		
+			&:active {
+				cursor: pointer;
+				filter: brightness(0.9);
+			}
+		}
+	}
+
+	// .header__user
+
+	&__user {
+		display: flex;
+		align-items: center;
+		gap: 0.9375rem;
+
+		@media (hover: hover) {
+
+			&:hover b {
+				color: var(--accent);
+			}
+		
+			&:active b {
+				color: var(--accent-active);
+			}
+		}
+	}
+
+	// .header__user-avatar
+
+	&__user-avatar {
+		width: 2.8125rem; height: 2.8125rem;
+
+		border-radius: 50%;
+		img {
+			border-radius: 50%;
+			width: 100%; height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// .header__user-info
+
+	&__user-info {
+
+		color: var(--text-color);
+
+		b {
+			display: block;
+
+			font-weight: 400;
+			line-height: 115%;
+
+			transition: color .2s;
+		}
+
+		span {
+			font-weight: 300;
+			line-height: 115%;
+		}
+	}
+}

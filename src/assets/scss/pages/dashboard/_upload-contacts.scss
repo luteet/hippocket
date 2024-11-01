@@ -1,0 +1,32 @@
+.upload-contacts {
+
+	grid-column: 2 span;
+
+	display: grid;
+	align-items: center;
+	grid-template-columns: auto 5.4375rem;
+	grid-auto-rows: min-content;
+	gap: 2.0625rem 1rem;
+
+	padding: 2.25rem 3.5625rem;
+
+	// .upload-contacts__title
+
+	&__title {
+	}
+
+	// .upload-contacts__icon
+
+	&__icon {
+		img {
+			width: 100%; height: auto;
+			aspect-ratio: 87/91;
+		}
+	}
+
+	// .upload-contacts__button
+
+	&__button {
+		grid-column: 2 span;
+	}
+}

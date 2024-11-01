@@ -1,0 +1,83 @@
+@use 'mixin';
+
+@font-face {
+	@include mixin.font-include('Readex Pro', 300, swap, normal, 'ReadexPro-Light');
+}
+
+@font-face {
+	@include mixin.font-include('Readex Pro', 400, swap, normal, 'ReadexPro-Regular');
+}
+
+@font-face {
+	@include mixin.font-include('Readex Pro', 500, swap, normal, 'ReadexPro-Medium');
+}
+
+@font-face {
+	@include mixin.font-include('Readex Pro', 600, swap, normal, 'ReadexPro-SemiBold');
+}
+
+.main-title {
+	font-family: var(--title-font);
+	font-weight: 700;
+	line-height: 115%;
+
+	font-size: 1.875rem;
+
+	@media (min-width: 768px) {
+		font-size: 2.5rem;
+	}
+
+	@media (min-width: 992px) {
+		font-size: 3.125rem;
+	}
+}
+
+.title {
+	
+	font-family: var(--title-font);
+	font-weight: 600;
+	font-size: 1.5625rem;
+	line-height: 124%;
+	text-transform: uppercase;
+
+	font-size: 1.125rem;
+
+	@media(min-width: 768px) {
+		font-size: 1.35rem;
+	}
+
+	@media(min-width: 992px) {
+		font-size: 1.5625rem;
+	}
+
+}
+
+.title-min {
+	
+	font-family: var(--title-font);
+	font-weight: 500;
+	font-size: 1.5625rem;
+	line-height: 124%;
+
+	font-size: 1.125rem;
+
+	@media(min-width: 768px) {
+		font-size: 1.35rem;
+	}
+
+	@media(min-width: 992px) {
+		font-size: 1.5625rem;
+	}
+
+}
+
+.section-title {
+
+	font-family: var(--title-font);
+	font-weight: 700;
+
+}
+
+.txt-center {
+	text-align: center;
+}
